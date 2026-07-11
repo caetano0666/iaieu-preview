@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IAieu — Toda carreira tem uma história.</title>
+<title>IAieu · Toda carreira tem uma história.</title>
 
 <link rel="icon" href="favicon-quadrado.png" type="image/png">
 <link rel="apple-touch-icon" href="favicon-quadrado.png">
 <meta name="theme-color" content="#0A0A0F">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="IAieu — Toda carreira tem uma história.">
+<meta property="og:title" content="IAieu · Toda carreira tem uma história.">
 <meta property="og:description" content="Ajudo profissionais experientes a traduzir uma vida de trajetória em uma história que o mercado compreenda, valorize e reconheça.">
 <meta property="og:image" content="https://iaieu.com/site4.png">
 <meta property="og:image:width" content="1672">
 <meta property="og:image:height" content="941">
 <meta property="og:url" content="https://iaieu.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="Toda carreira tem uma história. Meu trabalho é ajudá-la a ser contada — com clareza, calma e no seu tempo.">
+<meta name="description" content="Toda carreira tem uma história. Meu trabalho é ajudá-la a ser contada, com clareza, calma e no seu tempo.">
 
 <style>
 /* ============================================================
-   IAieu — Estilo base (embutido para a home ser auto-suficiente)
+   IAieu · Estilo base (embutido para a home ser auto-suficiente)
    Cores: Fundo #0A0A0F · Roxo #7C3AED · Azul #2563EB · Branco · Cinza #A0A0B8
    ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
@@ -176,7 +176,7 @@ footer{
 }
 
 /* ============================================================
-   SINGLE PAGE — estilos específicos da home IAieu
+   SINGLE PAGE · estilos específicos da home IAieu
    ============================================================ */
 
 /* Âncoras param abaixo do menu fixo */
@@ -244,6 +244,18 @@ section[id]{scroll-margin-top:96px}
   border:1px solid rgba(255,255,255,0.12);border-radius:999px;padding:8px 16px;
 }
 
+/* ---------- Para quem é ---------- */
+#para-quem{position:relative;overflow:hidden}
+#para-quem::before{content:"";position:absolute;inset:0;z-index:0;background:url('bg-paraquem.png') center/cover no-repeat;opacity:0.24}
+#para-quem::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,#0A0A0F 34%,rgba(10,10,15,0.45) 100%)}
+#para-quem>*{position:relative;z-index:1}
+.pq-lista{list-style:none;max-width:660px;margin:26px 0 8px;display:flex;flex-direction:column;gap:15px}
+.pq-lista li{display:flex;gap:14px;align-items:flex-start;font-size:clamp(15px,1.6vw,18px);color:#c8c8d8;font-weight:300;line-height:1.6}
+.pq-lista li::before{content:"";flex-shrink:0;width:8px;height:8px;margin-top:9px;border-radius:50%;background:var(--grad)}
+.pq-lista strong{color:#fff;font-weight:500}
+.pq-close{font-size:clamp(18px,2.3vw,25px);font-weight:600;color:#fff;margin-top:32px;max-width:660px;line-height:1.4;letter-spacing:-0.01em}
+.pq-close b{background:var(--grad3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:800}
+
 /* ---------- Bloco 3: Como eu trabalho ---------- */
 #processo{position:relative;overflow:hidden}
 #processo::before{content:"";position:absolute;inset:0;z-index:0;
@@ -274,7 +286,7 @@ section[id]{scroll-margin-top:96px}
   -webkit-text-fill-color:transparent;color:transparent;
 }
 
-/* ---------- IAieu eVc — destaque máximo ---------- */
+/* ---------- IAieu eVc · destaque máximo ---------- */
 #evc{
   border:1px solid rgba(124,58,237,0.28);border-radius:28px;
   background:linear-gradient(180deg,rgba(124,58,237,0.07),rgba(37,99,235,0.03));
@@ -300,7 +312,7 @@ section[id]{scroll-margin-top:96px}
 .ref-link:hover{opacity:0.8}
 .evc-cta{display:flex;flex-wrap:wrap;align-items:center;gap:20px;margin-top:8px}
 
-/* ---------- IAieu+ e IAieu GO — cards de segundo plano ---------- */
+/* ---------- IAieu+ e IAieu GO · cards de segundo plano ---------- */
 .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .mini{
   border:1px solid rgba(255,255,255,0.09);border-radius:22px;padding:42px 38px;
@@ -388,7 +400,7 @@ section[id]{scroll-margin-top:96px}
   <a class="nav-logo" href="#topo"><span class="wordmark"><span class="w1">IA</span><span class="w2">ieu</span><span class="w3">&nbsp;eVc.</span></span></a>
   <ul class="nav-links">
     <li><a href="#processo">Como funciona</a></li>
-    <li><a href="#sozinho">Para quem é</a></li>
+    <li><a href="#para-quem">Para quem é</a></li>
     <li><a href="#entrego">O método</a></li>
     <li><a href="#casos">Conteúdos</a></li>
     <li><a href="#sobre">Sobre</a></li>
@@ -401,7 +413,7 @@ section[id]{scroll-margin-top:96px}
 <!-- HERO -->
 <section id="hero" name="topo"><a id="topo"></a>
   <div class="hero-top">
-    <div class="hero-photo"><img src="hero-visual.png" alt="Caetano — IAieu eVc"></div>
+    <div class="hero-photo"><img src="hero-visual.png" alt="Caetano · IAieu eVc"></div>
     <div class="hero-inner">
       <div class="hero-copy">
         <p class="hero-eyebrow">Clareza abre caminhos.</p>
@@ -442,7 +454,25 @@ section[id]{scroll-margin-top:96px}
 
 <div class="divisor"></div>
 
-<!-- BLOCO 2 — Você não precisa descobrir tudo sozinho -->
+<!-- PARA QUEM É -->
+<section id="para-quem">
+  <span class="rotulo">Para quem é</span>
+  <h2 class="titulo">Feito para quem já <em>construiu algo.</em></h2>
+  <div class="big-lead">
+    <p>Você não está começando do zero. Tem experiência, trajetória e resultado. O que falta não é competência. É clareza para mostrar tudo isso.</p>
+  </div>
+  <ul class="pq-lista">
+    <li>Você sente que o mercado mudou e a sua forma de se apresentar ficou para trás.</li>
+    <li>Tem uma carreira forte, mas trava na hora de colocá-la em palavras.</li>
+    <li>Já percebeu que <strong>competência sem comunicação não abre portas</strong>.</li>
+    <li>Quer voltar a ser reconhecido pelo profissional que você realmente é.</li>
+  </ul>
+  <p class="pq-close">Se você se reconheceu em alguma dessas linhas, <b>a gente precisa conversar.</b></p>
+</section>
+
+<div class="divisor"></div>
+
+<!-- BLOCO 2 · Você não precisa descobrir tudo sozinho -->
 <section id="sozinho">
   <h2 class="titulo">Você não precisa descobrir <em>tudo sozinho.</em></h2>
   <div class="big-lead">
@@ -453,13 +483,13 @@ section[id]{scroll-margin-top:96px}
   </div>
   <div class="big-lead">
     <p>Cada etapa exige tempo. Energia. Pesquisa. Adaptação. E, muitas vezes, você faz tudo isso sozinho.</p>
-    <p><strong>Eu também passei por isso.</strong> Demorei meses para encontrar um caminho. Hoje ele já existe — e pode ser muito mais curto para você.</p>
+    <p><strong>Eu também passei por isso.</strong> Demorei meses para encontrar um caminho. Hoje ele já existe. E pode ser muito mais curto para você.</p>
   </div>
 </section>
 
 <div class="divisor"></div>
 
-<!-- BLOCO 3 — Como eu trabalho -->
+<!-- BLOCO 3 · Como eu trabalho -->
 <section id="processo">
   <span class="rotulo">Como eu trabalho</span>
   <h2 class="titulo">Não começo pelo currículo. <em>Começo por você.</em></h2>
@@ -484,7 +514,7 @@ section[id]{scroll-margin-top:96px}
 
 <div class="divisor"></div>
 
-<!-- BLOCO 4 — Enquanto você se prepara -->
+<!-- BLOCO 4 · Enquanto você se prepara -->
 <section id="preparo">
   <h2 class="titulo">Enquanto você se prepara para a próxima oportunidade, <em>eu preparo o restante.</em></h2>
   <div class="narr-chips">
@@ -497,7 +527,7 @@ section[id]{scroll-margin-top:96px}
 
 <div class="divisor"></div>
 
-<!-- BLOCO 5 — Sobre / O IAieu nasceu da minha própria história -->
+<!-- BLOCO 5 · Sobre / O IAieu nasceu da minha própria história -->
 <section id="sobre">
   <span class="rotulo">Sobre</span>
   <h2 class="titulo">O IAieu nasceu da <em>minha própria história.</em></h2>
@@ -515,7 +545,7 @@ section[id]{scroll-margin-top:96px}
 
 <div class="divisor"></div>
 
-<!-- BLOCO 6 — O que realmente entrego -->
+<!-- BLOCO 6 · O que realmente entrego -->
 <section id="entrego">
   <h2 class="titulo">O que realmente <em>entrego.</em></h2>
   <div class="big-lead">
@@ -533,7 +563,7 @@ section[id]{scroll-margin-top:96px}
   <p class="subtitulo">A história vem primeiro. Depois, os caminhos concretos para começarmos juntos.</p>
 </section>
 
-<!-- IAieu eVc — destaque máximo -->
+<!-- IAieu eVc · destaque máximo -->
 <section id="evc">
   <span class="rotulo">IAieu eVc</span>
   <h2 class="titulo">IAieu <em>eVc</em></h2>
