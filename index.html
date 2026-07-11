@@ -245,6 +245,12 @@ section[id]{scroll-margin-top:96px}
 }
 
 /* ---------- Bloco 3: Como eu trabalho ---------- */
+#processo{position:relative;overflow:hidden}
+#processo::before{content:"";position:absolute;inset:0;z-index:0;
+  background:url('bg-metodo.png') center 46%/contain no-repeat;opacity:0.16}
+#processo::after{content:"";position:absolute;inset:0;z-index:0;
+  background:radial-gradient(ellipse 70% 60% at center,transparent 30%,rgba(10,10,15,0.85) 82%)}
+#processo>*{position:relative;z-index:1}
 .processo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
 .passo{
   border:1px solid rgba(255,255,255,0.09);border-radius:22px;padding:40px 34px;
