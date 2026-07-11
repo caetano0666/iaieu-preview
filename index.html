@@ -256,6 +256,25 @@ section[id]{scroll-margin-top:96px}
 .pq-close{font-size:clamp(18px,2.3vw,25px);font-weight:600;color:#fff;margin-top:32px;max-width:660px;line-height:1.4;letter-spacing:-0.01em}
 .pq-close b{background:var(--grad3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:800}
 
+/* ---------- Como funciona (3 passos) ---------- */
+#como-funciona{position:relative;overflow:hidden}
+#como-funciona::before{content:"";position:absolute;inset:0;z-index:0;background:url('bg-comofunciona.png') center/cover no-repeat;opacity:0.14}
+#como-funciona>*{position:relative;z-index:1}
+.cf-passos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
+.cf-passo{border:1px solid rgba(255,255,255,0.09);border-radius:22px;padding:38px 32px;background:rgba(255,255,255,0.03);transition:border-color .3s,transform .3s}
+.cf-passo:hover{border-color:rgba(124,58,237,0.32);transform:translateY(-4px)}
+.cf-num{font-size:34px;font-weight:900;line-height:1;background:var(--grad3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;margin-bottom:16px}
+.cf-passo h3{font-size:22px;font-weight:700;letter-spacing:-0.02em;color:#fff;margin-bottom:10px}
+.cf-passo p{font-size:15px;color:var(--cinza);font-weight:300;line-height:1.7}
+.cf-nota{font-size:clamp(17px,2vw,22px);font-weight:600;color:#fff;margin-top:32px;max-width:660px;line-height:1.4}
+.cf-nota strong{background:var(--grad3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:800}
+@media(max-width:820px){.cf-passos{grid-template-columns:1fr}}
+
+/* ---------- Sobre: fundo espiral ---------- */
+#sobre{position:relative;overflow:hidden}
+#sobre::before{content:"";position:absolute;inset:0;z-index:0;background:url('bg-sobre.png') right center/cover no-repeat;opacity:0.20;-webkit-mask-image:linear-gradient(to left,#000,transparent 66%);mask-image:linear-gradient(to left,#000,transparent 66%)}
+#sobre>*{position:relative;z-index:1}
+
 /* ---------- Bloco 3: Como eu trabalho ---------- */
 #processo{position:relative;overflow:hidden}
 #processo::before{content:"";position:absolute;inset:0;z-index:0;
@@ -399,9 +418,9 @@ section[id]{scroll-margin-top:96px}
 <nav>
   <a class="nav-logo" href="#topo"><span class="wordmark"><span class="w1">IA</span><span class="w2">ieu</span><span class="w3">&nbsp;eVc.</span></span></a>
   <ul class="nav-links">
-    <li><a href="#processo">Como funciona</a></li>
+    <li><a href="#como-funciona">Como funciona</a></li>
     <li><a href="#para-quem">Para quem é</a></li>
-    <li><a href="#entrego">O método</a></li>
+    <li><a href="#processo">O método</a></li>
     <li><a href="#casos">Conteúdos</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#cta" class="nav-cta-out">Fale comigo →</a></li>
@@ -472,26 +491,38 @@ section[id]{scroll-margin-top:96px}
 
 <div class="divisor"></div>
 
-<!-- BLOCO 2 · Você não precisa descobrir tudo sozinho -->
-<section id="sozinho">
-  <h2 class="titulo">Você não precisa descobrir <em>tudo sozinho.</em></h2>
-  <div class="big-lead">
-    <p>Você sabe trabalhar. Mas talvez ainda esteja tentando descobrir como transformar toda a sua experiência em uma história que o mercado consiga compreender.</p>
+<!-- COMO FUNCIONA -->
+<section id="como-funciona">
+  <span class="rotulo">Como funciona</span>
+  <h2 class="titulo">Simples para você. <em>O trabalho é meu.</em></h2>
+  <div class="cf-passos">
+    <div class="cf-passo">
+      <div class="cf-num">01</div>
+      <h3>Você conta</h3>
+      <p>Em poucos áudios, no seu tempo, você me passa sua história e onde quer chegar. Sem formulário. Sem tela em branco.</p>
+    </div>
+    <div class="cf-passo">
+      <div class="cf-num">02</div>
+      <h3>Eu traduzo</h3>
+      <p>Transformo tudo em perfil, posicionamento e conteúdo na sua voz. Você aprova cada coisa antes de ir para o mundo.</p>
+    </div>
+    <div class="cf-passo">
+      <div class="cf-num">03</div>
+      <h3>Você aparece</h3>
+      <p>Você publica como quem sempre soube se comunicar. E o mercado finalmente enxerga o profissional que você é.</p>
+    </div>
   </div>
   <div class="narr-chips">
-    <span>Currículos</span><span>LinkedIn</span><span>Formulários</span><span>Apresentações</span><span>Entrevistas</span>
+    <span>Perfil no LinkedIn</span><span>Posicionamento</span><span>Narrativa profissional</span><span>Conteúdo na sua voz</span><span>Currículo</span><span>Apresentação</span>
   </div>
-  <div class="big-lead">
-    <p>Cada etapa exige tempo. Energia. Pesquisa. Adaptação. E, muitas vezes, você faz tudo isso sozinho.</p>
-    <p><strong>Eu também passei por isso.</strong> Demorei meses para encontrar um caminho. Hoje ele já existe. E pode ser muito mais curto para você.</p>
-  </div>
+  <p class="cf-nota">Você continua sendo o protagonista. <strong>Eu cuido da complexidade.</strong></p>
 </section>
 
 <div class="divisor"></div>
 
 <!-- BLOCO 3 · Como eu trabalho -->
 <section id="processo">
-  <span class="rotulo">Como eu trabalho</span>
+  <span class="rotulo">O método</span>
   <h2 class="titulo">Não começo pelo currículo. <em>Começo por você.</em></h2>
   <div class="processo-grid">
     <div class="passo">
@@ -509,19 +540,6 @@ section[id]{scroll-margin-top:96px}
       <h3>Traduzo</h3>
       <p>Transformo tudo isso em uma história clara, coerente e relevante para quem precisa conhecê-la.</p>
     </div>
-  </div>
-</section>
-
-<div class="divisor"></div>
-
-<!-- BLOCO 4 · Enquanto você se prepara -->
-<section id="preparo">
-  <h2 class="titulo">Enquanto você se prepara para a próxima oportunidade, <em>eu preparo o restante.</em></h2>
-  <div class="narr-chips">
-    <span>Currículo</span><span>LinkedIn</span><span>Narrativa profissional</span><span>Apresentação</span><span>Adequação para oportunidades</span><span>Posicionamento</span><span>Comunicação</span><span>Estratégia</span>
-  </div>
-  <div class="big-lead">
-    <p>Você continua sendo o protagonista. <strong>Eu cuido da complexidade.</strong></p>
   </div>
 </section>
 
