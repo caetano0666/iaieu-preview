@@ -181,56 +181,53 @@ footer{
 section[id]{scroll-margin-top:96px}
 @media(max-width:820px){section[id]{scroll-margin-top:120px}}
 
-/* ---------- HERO (foto + meia luz) ---------- */
-#hero{
-  position:relative;min-height:100vh;max-width:none;margin:0;
-  display:flex;align-items:center;
-  padding:120px 0 84px;overflow:hidden;
+/* Menu: logo "eVc" e botão contornado */
+.wordmark .w3{background:var(--grad3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:600}
+.nav-cta-out{
+  border:1px solid rgba(124,58,237,0.55);color:#fff!important;
+  padding:9px 20px;border-radius:999px;font-weight:600!important;
+  transition:background .2s,border-color .2s;
 }
+.nav-cta-out:hover{background:rgba(124,58,237,0.16);border-color:var(--roxo)}
+
+/* ---------- HERO (arte final: foto + bússola + pilares) ---------- */
+#hero{position:relative;min-height:100vh;max-width:none;margin:0;padding:0;overflow:hidden;display:flex;flex-direction:column}
+.hero-top{position:relative;flex:1 1 auto;display:flex;align-items:center;padding:120px 0 28px}
 .hero-inner{width:100%;max-width:1280px;margin:0 auto;padding:0 40px;position:relative;z-index:2}
-.hero-copy{max-width:600px}
+.hero-copy{max-width:590px}
 .hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--roxo);margin-bottom:22px}
-.hero-title{
-  font-size:clamp(38px,5.6vw,66px);font-weight:800;line-height:1.04;
-  letter-spacing:-0.04em;color:#fff;text-wrap:balance;
-}
-.hero-sub{
-  font-size:clamp(29px,4.4vw,54px);font-weight:800;line-height:1.06;
-  letter-spacing:-0.04em;margin-top:6px;text-wrap:balance;
-  background:var(--grad3);-webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;color:transparent;
-}
-.hero-rule{width:64px;height:3px;border-radius:2px;background:var(--grad);margin:30px 0 26px}
-.hero-text{max-width:520px}
-.hero-text p{font-size:clamp(15px,1.5vw,17px);line-height:1.75;color:var(--cinza);font-weight:300}
-.hero-text p+p{margin-top:16px}
-.hero-text strong{color:#fff;font-weight:500}
-.hero-marca{font-size:clamp(18px,2.1vw,25px);font-weight:600;letter-spacing:-0.02em;line-height:1.35;margin:28px 0 30px}
-.hero-marca b{background:var(--grad3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;font-weight:800}
+.hero-title{font-size:clamp(38px,5.4vw,64px);font-weight:800;line-height:1.04;letter-spacing:-0.04em;color:#fff;text-wrap:balance}
+.hero-sub{font-size:clamp(28px,4.2vw,52px);font-weight:800;line-height:1.06;letter-spacing:-0.04em;margin-top:6px;text-wrap:balance;background:var(--grad3);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.hero-rule{width:64px;height:3px;border-radius:2px;background:var(--grad);margin:30px 0 24px}
+.hero-lead2{font-size:clamp(16px,1.6vw,19px);line-height:1.7;color:var(--cinza);font-weight:300;max-width:430px;margin-bottom:34px}
 .hero-actions{display:flex;align-items:center;gap:12px 26px;flex-wrap:wrap}
-.hero-cta{display:inline-flex}
+.hero-cta{display:inline-flex;border-radius:999px}
 .hero-link{color:#fff;text-decoration:none;font-size:16px;font-weight:600;border-bottom:2px solid var(--roxo);padding-bottom:3px;transition:opacity .2s}
 .hero-link:hover{opacity:.72}
 
-/* foto à direita, recortada com meia luz */
-.hero-photo{position:absolute;top:0;right:0;bottom:0;width:56%;z-index:1;pointer-events:none}
-.hero-photo::before{
-  content:"";position:absolute;inset:0;z-index:1;
-  background:
-    radial-gradient(38% 40% at 40% 28%,rgba(139,79,255,0.60),transparent 68%),
-    radial-gradient(42% 44% at 74% 64%,rgba(37,99,235,0.48),transparent 70%),
-    radial-gradient(60% 60% at 60% 44%,rgba(124,58,237,0.20),transparent 72%);
-}
-.hero-photo img{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:100% 46%;z-index:2;
-  opacity:0.60;
-  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 20%,#000 100%);
-  mask-image:linear-gradient(to right,transparent 0%,#000 20%,#000 100%);
-}
+/* arte à direita (foto + bússola + luz) */
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:60%;z-index:1;pointer-events:none}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:100% 46%;z-index:2;
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 22%,#000 100%);
+  mask-image:linear-gradient(to right,transparent 0%,#000 22%,#000 100%);}
+
+/* 5 pilares na base do hero */
+.hero-pilares{position:relative;z-index:3;width:100%;max-width:1280px;margin:0 auto;
+  padding:22px 40px 30px;border-top:1px solid rgba(255,255,255,0.09);
+  display:grid;grid-template-columns:repeat(5,1fr);gap:22px}
+.pilar{display:flex;align-items:flex-start;gap:13px}
+.pilar-ic{width:30px;height:30px;color:var(--roxo);flex-shrink:0;margin-top:1px}
+.pilar-ic svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.pilar-t{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff}
+.pilar-s{font-size:12.5px;color:var(--cinza);font-weight:300;margin-top:4px;line-height:1.4}
+@media(max-width:960px){.hero-pilares{grid-template-columns:repeat(2,1fr);gap:18px 22px}}
+@media(max-width:520px){.hero-pilares{grid-template-columns:1fr}}
+
 @media(max-width:900px){
-  #hero{min-height:auto;padding:132px 0 56px}
-  .hero-photo{width:100%;opacity:0.22}
-  .hero-photo img{object-position:50% 12%;-webkit-mask-image:linear-gradient(to bottom,#000 30%,transparent 92%);mask-image:linear-gradient(to bottom,#000 30%,transparent 92%)}
+  #hero{min-height:auto}
+  .hero-top{padding:128px 0 22px}
+  .hero-photo{width:100%;opacity:0.30}
+  .hero-photo img{object-fit:cover;object-position:60% 28%;-webkit-mask-image:linear-gradient(to bottom,#000 18%,transparent 86%);mask-image:linear-gradient(to bottom,#000 18%,transparent 86%)}
   .hero-copy{max-width:100%}
   .hero-inner{padding:0 22px}
 }
@@ -368,14 +365,14 @@ section[id]{scroll-margin-top:96px}
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#topo"><span class="wordmark"><span class="w1">IA</span><span class="w2">ieu.</span></span></a>
+  <a class="nav-logo" href="#topo"><span class="wordmark"><span class="w1">IA</span><span class="w2">ieu</span><span class="w3">&nbsp;eVc.</span></span></a>
   <ul class="nav-links">
-    <li><a href="#processo">Como eu trabalho</a></li>
+    <li><a href="#processo">Como funciona</a></li>
+    <li><a href="#sozinho">Para quem é</a></li>
+    <li><a href="#entrego">O método</a></li>
+    <li><a href="#casos">Conteúdos</a></li>
     <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#evc">Serviços</a></li>
-    <li><a href="#casos">Casos Reais</a></li>
-    <li><a href="#depoimentos">Depoimentos</a></li>
-    <li><a href="#cta" class="nav-cta">Começar</a></li>
+    <li><a href="#cta" class="nav-cta-out">Fale comigo →</a></li>
   </ul>
 </nav>
 
@@ -383,22 +380,42 @@ section[id]{scroll-margin-top:96px}
 
 <!-- HERO -->
 <section id="hero" name="topo"><a id="topo"></a>
-  <div class="hero-photo"><img src="cae-hero.png" alt="Caetano, fundador do IAieu"></div>
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <p class="hero-eyebrow">Clareza abre caminhos.</p>
-      <h1 class="hero-title">Toda carreira tem uma história.</h1>
-      <p class="hero-sub">Meu trabalho é ajudá-la a ser contada.</p>
-      <div class="hero-rule"></div>
-      <div class="hero-text">
-        <p>Você construiu uma carreira. Acumulou experiência. Resolveu problemas. Liderou equipes. Tomou decisões importantes.</p>
-        <p>Mas, quando chega o momento de apresentar tudo isso ao mercado, anos de experiência acabam resumidos em poucas linhas. E quase nunca isso representa quem você realmente é.</p>
+  <div class="hero-top">
+    <div class="hero-photo"><img src="hero-visual.png" alt="Caetano — IAieu eVc"></div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Clareza abre caminhos.</p>
+        <h1 class="hero-title">Toda carreira tem uma história.</h1>
+        <p class="hero-sub">Meu trabalho é ajudá-la a ser contada.</p>
+        <div class="hero-rule"></div>
+        <p class="hero-lead2">Eu traduzo trajetórias profissionais em posicionamento, comunicação e clareza que geram reconhecimento.</p>
+        <div class="hero-actions">
+          <a class="btn-grad hero-cta" href="https://wa.me/17542525245?text=Ol%C3%A1!%20Quero%20clareza%20na%20minha%20hist%C3%B3ria%20(IAieu)." target="_blank" rel="noopener">Quero clareza na minha história →</a>
+          <a class="hero-link" href="#processo">Entenda o método</a>
+        </div>
       </div>
-      <p class="hero-marca">Eu não escrevo histórias.<br><b>Traduzo trajetórias.</b></p>
-      <div class="hero-actions">
-        <a class="btn-grad hero-cta" href="https://wa.me/17542525245?text=Ol%C3%A1!%20Quero%20conhecer%20o%20IAieu." target="_blank" rel="noopener">Conheça o IAieu →</a>
-        <a class="hero-link" href="#sobre">Minha história</a>
-      </div>
+    </div>
+  </div>
+  <div class="hero-pilares">
+    <div class="pilar">
+      <span class="pilar-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><line x1="12" y1="1.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22.5" y2="12"/></svg></span>
+      <div><div class="pilar-t">Clareza</div><div class="pilar-s">Para enxergar com direção.</div></div>
+    </div>
+    <div class="pilar">
+      <span class="pilar-ic"><svg viewBox="0 0 24 24"><path d="M22 2 15 22l-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></svg></span>
+      <div><div class="pilar-t">Posicionamento</div><div class="pilar-s">Para comunicar com segurança.</div></div>
+    </div>
+    <div class="pilar">
+      <span class="pilar-ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="9.5" r="5.5"/><circle cx="15" cy="9.5" r="5.5"/><circle cx="12" cy="15" r="5.5"/></svg></span>
+      <div><div class="pilar-t">Comunicação</div><div class="pilar-s">Para ser compreendido.</div></div>
+    </div>
+    <div class="pilar">
+      <span class="pilar-ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+      <div><div class="pilar-t">Execução</div><div class="pilar-s">Para gerar resultado.</div></div>
+    </div>
+    <div class="pilar">
+      <span class="pilar-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></span>
+      <div><div class="pilar-t">Autonomia</div><div class="pilar-s">Para seguir com confiança.</div></div>
     </div>
   </div>
 </section>
